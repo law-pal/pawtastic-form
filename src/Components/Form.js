@@ -39,9 +39,30 @@ class Form extends Component {
     } 
 
     handleSubmit(event) {
-        alert();
+        const myString = JSON.stringify(this.state)
+        alert(`Pet information was submitted ${myString}`);
         event.preventDefault()
     }
+
+    render() {
+        return(
+            <div>
+                <form className='form' onSubmit={this.handleSubmit}>
+                    <input placeholder='name' type='text' value={this.state.name} onChange={this.handleNameChange}/>
+                    <input placeholder='breed' type='text' value={this.state.breed} onChange={this.handleBreedChange}/>
+                    <input placeholder='birthday' type='text' value={this.state.birthday} onChange={this.handleBirthdayChange}/>
+                    <input className='male' type='radio' name='gender' value='male' onChange={this.handleGenderChange}/>
+                    <label for='male'>Male</label>
+                    <input className='male' type='radio' name='gender' value='female' onChange={this.handleGenderChange}/>
+                    <label for='female'>Female</label>
+                    <input placeholder='weight' type='text' value={this.state.weight} onChange={this.handleWeightChange}/>
+
+                </form>
+            </div>
+        );
+    }
+
 }
+
 
 export default Form; 
