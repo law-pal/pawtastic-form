@@ -4,7 +4,11 @@ class Form extends Component {
     constructor() {
         super()
         this.state = {
-            
+            name: '',
+            breed: '',
+            birthday: '',
+            gender: '',
+            weight: ''
         }
     }
 }
