@@ -15,6 +15,7 @@ class Form extends Component {
         this.handleBirthdayChange = this.handleBirthdayChange.bind(this);
         this.handleGenderChange = this.handleGenderChange.bind(this);
         this.handleWeightChange = this.handleWeightChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleNameChange(event) {
@@ -36,6 +37,11 @@ class Form extends Component {
     handleWeightChange(event) {
         this.setState({weight: event.target.value});
     } 
+
+    handleSubmit(event) {
+        alert();
+        event.preventDefault()
+    }
 }
 
 export default Form; 
