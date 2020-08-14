@@ -56,7 +56,6 @@ class Form extends Component {
                     <input className='male' type='radio' name='gender' value='female' onChange={this.handleGenderChange}/>
                     <label for='female'>Female</label>
                     <input placeholder='weight' type='text' value={this.state.weight} onChange={this.handleWeightChange}/>
-
                 </form>
             </div>
         );
