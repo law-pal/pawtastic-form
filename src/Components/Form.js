@@ -46,16 +46,18 @@ class Form extends Component {
 
     render() {
         return(
-            <div>
+            <div className='container'>
                 <form className='form' onSubmit={this.handleSubmit}>
                     <input placeholder='name' type='text' value={this.state.name} onChange={this.handleNameChange}/>
                     <input placeholder='breed' type='text' value={this.state.breed} onChange={this.handleBreedChange}/>
-                    <input placeholder='birthday' type='text' value={this.state.birthday} onChange={this.handleBirthdayChange}/>
-                    <input className='male' type='radio' name='gender' value='male' onChange={this.handleGenderChange}/>
-                    <label for='male'>Male</label>
-                    <input className='male' type='radio' name='gender' value='female' onChange={this.handleGenderChange}/>
-                    <label for='female'>Female</label>
+                    <input id='birthday' type='date' value={this.state.birthday} onChange={this.handleBirthdayChange}/>
+                    <input className='male' type='checkbox' name='gender' value='male' onChange={this.handleGenderChange}/>
+                    <label for='toggle' className='switch'>Male</label>
+                    <input className='male' type='checkbox' name='gender' value='female' onChange={this.handleGenderChange}/>
+                    <label for='toggle' className='switch'>Female</label>
                     <input placeholder='weight' type='text' value={this.state.weight} onChange={this.handleWeightChange}/>
+                    <br/>
+                    <button className='submit' type='submit' value='Submit'>Submit</button> 
                 </form>
             </div>
         );
